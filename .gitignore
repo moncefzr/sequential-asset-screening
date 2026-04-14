@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+dist/
+build/
+
+# MATLAB
+*.asv
+*.m~
+slprj/
+
+# Figures output (generated — not tracked)
+*.fig
+*_preview.png
+fig_backtest_kpi.png
+fig_backtest_kpi.eps
+
+# KPI outputs (generated — not tracked)
+kpi_overall.csv
+kpi_window_level.csv
+kpi_window_summary.csv
+kpi_regime.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
