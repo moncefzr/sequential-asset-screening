@@ -3,7 +3,6 @@
 > Replication code for the paper:  
 > **"Sequential Asset Screening under Return and Tradability Constraints:
 > An Optimal-Stopping Framework with Exact Recursion and Adaptive Window Policies"**  
-> *Submitted to the European Journal of Operational Research (EJOR)*
 
 ---
 
