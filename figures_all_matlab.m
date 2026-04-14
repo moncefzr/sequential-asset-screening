@@ -1,8 +1,4 @@
-% figures_all_matlab_jsac_style.m
-% ================================================
-% Revised plotting/styling version inspired by the
-% visual language of the uploaded journal article.
-%
+% figures_all_matlab.m
 % FIGURE-TO-PAPER MAPPING
 % -----------------------
 %   fig1_val_w0       -> Paper Figure 1(a): P_total vs w0
@@ -17,18 +13,8 @@
 %   fig10_robust_w0   -> Paper Table  6:    Heavy-tail robustness
 %   (Paper Figure 4 is produced by backtest_kpi_full.py, not this script)
 %
-% Core analytical / Monte Carlo computations are unchanged.
-% Main changes:
-%   - IEEE / journal-like single-panel styling
-%   - compact boxed legends
-%   - article-inspired color palette
-%   - red-star Monte Carlo grammar where appropriate
-%   - no in-axes titles (caption carries meaning)
-%   - direct on-plot annotations where cleaner than large legends
-%   - Figure 2 rendered as a chart (bars) instead of curves, as requested
-%
 % HOW TO RUN:
-%   >> figures_all_matlab_jsac_style
+%   >> figures_all_matlab
 %
 % Produces:
 %   fig2_val_alpha.pdf
@@ -333,8 +319,6 @@ function add_direct_label(ax, x, y, str, color, rot, halign)
 end
 % =========================================================================
 %  FIG 1 -- Validation: P_total vs w0
-%  JSAC-style revision: compact journal styling, no title,
-%  red-star simulation markers, thin boxed axes, direct annotations.
 % =========================================================================
 function fig1_val_w0(BP, N_MC, fmt, dir, dpi)
 
@@ -370,9 +354,6 @@ function fig1_val_w0(BP, N_MC, fmt, dir, dpi)
                 w, Ps(i), Pm(i), Pc(i), Qm(i));
     end
 
-    % -----------------------------
-    % JSAC-like palette
-    % -----------------------------
     C.blue    = [0.18 0.33 1.00];   % analytical family 1
     C.dgray   = [0.30 0.30 0.30];   % analytical family 2
     C.redSim  = [1.00 0.23 0.19];   % simulation stars
@@ -491,7 +472,7 @@ function fig1_val_w0(BP, N_MC, fmt, dir, dpi)
     sfig(fig, 'fig1_val_w0', fmt, dir, dpi);
 end
 %% =========================================================================
-%% FIG 2 -- Validation: P_total vs alpha (CHART / bars instead of curves)
+%% FIG 2 -- Validation: P_total vs alpha 
 %% =========================================================================
 function fig2_val_alpha(BP, N_MC, fmt, dir, dpi, C)
     fprintf('\n[Fig 2] P_total vs alpha (chart style) ...\n');
@@ -621,7 +602,7 @@ function fig4_val_vs_m(BP, N_MC, fmt, dir, dpi, C)
 end
 
 %% =========================================================================
-%% FIG 5 -- Validation: conditional PDF vs MC (article-like line/marker form)
+%% FIG 5 -- Validation: conditional PDF vs MC 
 %% =========================================================================
 function fig5_val_condpdf(BP, fmt, dir, dpi, C)
     fprintf('\n[Fig 5] Conditional PDF ...\n');
@@ -908,10 +889,6 @@ end
 %% =========================================================================
 %% FIG 10 -- Heavy-tail robustness: P_total vs w0
 %% Gaussian analytical curves vs Student-t Monte Carlo
-%% Purpose:
-%%   - keep analytical model unchanged (Gaussian recursion)
-%%   - generate Monte Carlo returns from standardized Student-t
-%%   - test whether shrink-only still ranks above constant across w0
 %% =========================================================================
 function fig10_robust_w0(BP, N_MC, fmt, dir, dpi, C)
 
@@ -962,9 +939,7 @@ function fig10_robust_w0(BP, N_MC, fmt, dir, dpi, C)
                  w, Pana_ad(i), Pmc_ad(i), Pana_ct(i), Pmc_ct(i));
     end
 
-    % -------------------------------------------------
-    % FIX: Compute Table 6 aggregate statistics
-    % These were previously missing; computed here from per-w0 results.
+
     % -------------------------------------------------
     gains = Pmc_ad - Pmc_ct;
     fprintf('\n=== Table 6: Heavy-tail robustness summary (Student-t MC, nu=%d) ===\n', nu);
