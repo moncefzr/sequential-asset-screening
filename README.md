@@ -130,18 +130,6 @@ Runtime: approximately 20–40 minutes (N_MC = 20,000 trials per figure).
 
 ---
 
-## Citation
-
-```bibtex
-@article{,
-  title   = {Sequential Asset Screening under Return and Tradability Constraints:
-             An Optimal-Stopping Framework with Exact Recursion and Adaptive Window Policies},
-  author  = {},
-  journal = {European Journal of Operational Research},
-  year    = {},
-  note    = {Under review}
-}
-```
 
 ---
 
