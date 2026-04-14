@@ -5,15 +5,6 @@ backtest_kpi_full.py
 Full rolling-window back-test + KPI extraction for the dual-criterion
 adaptive shrinking-window screening model.
 
-CHANGES FROM ORIGINAL
----------------------
-1. Column renamed: log_illiq -> log_tradability (higher = more tradable).
-   This aligns the empirical variable with the theoretical model (Section 2.2)
-   where eligibility requires M_i >= T_b and larger M_i means more tradable.
-2. pQ threshold aligned with MATLAB: 1e-10 -> 1e-8.
-3. pe gate [0.02, 0.98] retained but documented explicitly.
-4. kpi_window_summary.csv is now saved (previously only printed).
-5. prepare_data.py cross-reference corrected (was pointing to a non-existent .m).
 
 HOW TO RUN
 ----------
