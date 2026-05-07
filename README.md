@@ -20,7 +20,7 @@ review window.
 ## Repository structure
 
 ```
-.
+- `SOLUTION.md`: application report describing the problem, method, results, and relevance.
 ├── prepare_data.py                   # Step 1 — download & build data_monthly.csv
 ├── backtest_kpi_full.py              # Step 2 — rolling back-test, Figure 4, KPI tables
 ├── figures_all_matlab.m   # Step 3 — Figures 1–3 and Table 6 (MATLAB)
