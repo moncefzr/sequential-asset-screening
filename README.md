@@ -23,7 +23,7 @@ review window.
 .
 ├── prepare_data.py                   # Step 1 — download & build data_monthly.csv
 ├── backtest_kpi_full.py              # Step 2 — rolling back-test, Figure 4, KPI tables
-├── figures_all_matlab_jsac_style.m   # Step 3 — Figures 1–3 and Table 6 (MATLAB)
+├── figures_all_matlab.m   # Step 3 — Figures 1–3 and Table 6 (MATLAB)
 ├── data/
 │   └── data_monthly.csv             # Pre-built CSV (30 S&P 500 constituents, 2005–2023)
 ├── requirements.txt                  # Python dependencies
