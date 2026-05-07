@@ -36,16 +36,16 @@ review window.
 
 | Output | Script | Paper location |
 |--------|--------|----------------|
-| `fig1_val_w0`        | `figures_all_matlab_jsac_style.m` | Figure 1(a) — P_total vs w0 |
-| `fig2_val_alpha`     | `figures_all_matlab_jsac_style.m` | Figure 1(b) — P_total vs α (bar chart) |
-| `fig3_val_vs_n`      | `figures_all_matlab_jsac_style.m` | Figure 1(c) — P_total vs n |
-| `fig4_val_vs_m`      | `figures_all_matlab_jsac_style.m` | Figure 2(a) — P_total vs m |
-| `fig5_val_condpdf`   | `figures_all_matlab_jsac_style.m` | Figure 2(b) — Conditional score density |
-| `fig6_val_benchmark` | `figures_all_matlab_jsac_style.m` | Figure 2(c) — Benchmark distribution |
-| `fig7_app_policy`    | `figures_all_matlab_jsac_style.m` | Figure 3(a) — Policy comparison |
-| `fig8_app_w0`        | `figures_all_matlab_jsac_style.m` | Figure 3(b) — P_total vs w0 (4 contexts) |
-| `fig9_app_alpha`     | `figures_all_matlab_jsac_style.m` | Figure 3(c) — P_total vs α (4 contexts) |
-| `fig10_robust_w0` + Table 6 summary | `figures_all_matlab_jsac_style.m` | Table 6 — Heavy-tail robustness |
+| `fig1_val_w0`        | `figures_all_matlab.m` | Figure 1(a) — P_total vs w0 |
+| `fig2_val_alpha`     | `figures_all_matlab.m` | Figure 1(b) — P_total vs α (bar chart) |
+| `fig3_val_vs_n`      | `figures_all_matlab.m` | Figure 1(c) — P_total vs n |
+| `fig4_val_vs_m`      | `figures_all_matlab.m` | Figure 2(a) — P_total vs m |
+| `fig5_val_condpdf`   | `figures_all_matlab.m` | Figure 2(b) — Conditional score density |
+| `fig6_val_benchmark` | `figures_all_matlab.m` | Figure 2(c) — Benchmark distribution |
+| `fig7_app_policy`    | `figures_all_matlab.m` | Figure 3(a) — Policy comparison |
+| `fig8_app_w0`        | `figures_all_matlab.m` | Figure 3(b) — P_total vs w0 (4 contexts) |
+| `fig9_app_alpha`     | `figures_all_matlab.m` | Figure 3(c) — P_total vs α (4 contexts) |
+| `fig10_robust_w0` + Table 6 summary | `figures_all_matlab.m` | Table 6 — Heavy-tail robustness |
 | `fig_backtest_kpi.pdf` | `backtest_kpi_full.py` | Figure 4 — Rolling back-test |
 | `kpi_overall.csv`    | `backtest_kpi_full.py` | Table 7 (overall KPIs) |
 | `kpi_window_summary.csv` | `backtest_kpi_full.py` | Table 7 (Spearman / monotonicity rows) |
@@ -95,7 +95,7 @@ CSV files. Runtime: approximately 15–30 minutes depending on hardware
 Open MATLAB, navigate to this folder, and run:
 
 ```matlab
-figures_all_matlab_jsac_style
+figures_all_matlab
 ```
 
 All figures (fig1–fig10) are saved as `.eps` and `.fig` in the current
