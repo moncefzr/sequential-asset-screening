@@ -25,3 +25,4 @@ The project is relevant to machine learning systems and industrial AI because it
 ```bash
 pip install -r requirements.txt
 python backtest_kpi_full.py
+```
